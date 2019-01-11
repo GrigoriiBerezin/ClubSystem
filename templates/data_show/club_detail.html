@@ -1,0 +1,28 @@
+{% extends 'data_show/base_card.html' %}
+
+{% block title %}{{ club.name }}{% endblock %}
+{% block card %}
+    <div class="club-card">
+        <a class="photo" href="{{ club.logo.url }}" style="background-image: url({{ club.logo.url }})"></a>
+        <div class="details">
+            <h3 class="headline">{{ club.name }}</h3>
+            <hr>
+            <h5>{{ club.club_head }}</h5>
+            <ul class="contact">
+                <li>
+                    <i class="fa fa-phone"></i>
+                    {{ club.club_head.telephone }}
+                </li>
+                <li>
+                    <i class="fa fa-envelope-o"></i>
+                    <a href="mailto:{{ club.club_head.email }}" target="_blank">{{ club.club_head.email }}</a>
+                </li>
+            </ul>
+            <div class="source">
+                <a class="text-center" href="{{ club.source }}" target="_blank">
+                    <i class="fa fa-vk" style="line-height: 32px"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+{% endblock card %}

@@ -1,0 +1,91 @@
+.club-card {
+    min-height: 230px;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 0 40px rgba(0,0,0,.1);
+    border-radius: 10px;
+    margin: 30px 0;
+    position: relative;
+}
+.club-card .photo {
+    width: 25%;
+    height: 100%;
+    background-repeat: no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    border-radius: 10px 0 0 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.club-card .details {
+    margin-left: 22%;
+    padding-left: 45px;
+    padding-bottom: 15px;
+}
+.details .headline {
+    margin-top: 1rem;
+}
+.headline>a {
+    text-decoration: none;
+    color: inherit;
+}
+ul.contact {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+}
+ul.contact i.fa {
+    color: #73adff;
+}
+ul.contact li:hover i.fa {
+    color: #ec0b43;
+}
+.source {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    float: right;
+}
+.source a {
+    margin-left: 7px;
+    float: left;
+    height: 32px;
+    width: 32px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background-color: rgba(115,173,255,.25);
+    transition: color .4s,background-color .4s;
+    transition-property: color, background-color;
+    transition-duration: 0.4s, 0.4s;
+    transition-timing-function: ease, ease;
+    transition-delay: 0s, 0s;
+}
+.source a:hover {
+    background-color: #2f7fed;
+    color: #fff;
+}
+.menu-group {
+    margin-top: 30px;
+    position:sticky;
+    top: 30px;
+}
+
+/* Some effects */
+.hvr-bounce-in {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+.hvr-bounce-in:hover, .hvr-bounce-in:focus, .hvr-bounce-in:active {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
+  -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+  transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+}

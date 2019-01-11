@@ -1,0 +1,6 @@
+.idea/
+DjangoProj/files/
+DjangoProj/__pycache__/
+data_show/migrations
+data_show/__pycache__/
+__pycache__/
