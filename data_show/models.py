@@ -16,7 +16,7 @@ class Club(models.Model):
     description = models.TextField()
     structure = models.TextField(blank=True)
     source = models.URLField()
-    club_head = models.ForeignKey(
+    club_head = models.OneToOneField(
         to='Student',
         on_delete=models.SET_NULL,
         null=True,
@@ -65,6 +65,7 @@ class Student(models.Model):
         ('L', 'Leader'),
         ('M', 'Manager'),
     )
+    portrait = models.ImageField(upload_to='contacts/', blank=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=75)
     status = models.CharField(

@@ -1,8 +1,8 @@
-{% extends 'data_show/base_card.html' %}
+{% extends 'data_show/base.html' %}
 
 {% block title %}Index page{% endblock %}
 
-{% block card %}
+{% block contain %}
     {% for club in club_names %}
         <div class="club-card">
             <a class="photo" href="{{ club.logo.url }}" style="background-image: url({{ club.logo.url }})"></a>
@@ -11,14 +11,18 @@
                 <hr>
                 <h5>{{ club.club_head }}</h5>
                 <ul class="contact">
-                    <li>
-                        <i class="fa fa-phone"></i>
-                        {{ club.club_head.telephone }}
-                    </li>
-                    <li>
-                        <i class="fa fa-envelope-o"></i>
-                        <a href="mailto:{{ club.club_head.email }}" target="_blank">{{ club.club_head.email }}</a>
-                    </li>
+                    {% if club.club_head.telephone %}
+                        <li>
+                            <i class="fa fa-phone"></i>
+                            {{ club.club_head.telephone }}
+                        </li>
+                    {% endif %}
+                    {% if club.club_head.email %}
+                        <li>
+                            <i class="fa fa-envelope-o"></i>
+                            <a href="mailto:{{ club.club_head.email }}" target="_blank">{{ club.club_head.email }}</a>
+                        </li>
+                    {% endif %}
                 </ul>
                 <div class="source">
                     <a class="text-center" href="{{ club.source }}" target="_blank">
@@ -30,4 +34,4 @@
     {% endfor %}
 {% endblock %}
 
-{% block additional %}{% endblock %}
+{% block menu %}{% endblock %}

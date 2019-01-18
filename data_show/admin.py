@@ -62,6 +62,7 @@ class StudentAdmin(admin.ModelAdmin):
         'telephone',
     )
     fields = (
+        'portrait',
         ('first_name', 'last_name'),
         ('email', 'telephone'),
         'status',
